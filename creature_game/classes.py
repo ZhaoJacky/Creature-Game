@@ -1,10 +1,13 @@
+# Creator: ZhaoJacky
+# Purpose: This file contains all the class definitions for the monster
+# game.
 
 # Class for a Monster.
 class Monster:
     # Constructor for the Monster class.
     def __init__(self, name, type1, type2, max_hp, hp,
                  attack, defense, sp_attack, sp_defense, level, max_exp,
-                 exp, moveset):
+                 exp):
         # Stats
         self.name = name
         self.type1 = type1
@@ -18,9 +21,6 @@ class Monster:
         self.level = level
         self.max_exp = max_exp
         self.exp = exp
-
-        # Moveset
-        self.moveset = moveset
 
     # Gets data from the monster.
     def get_name(self):

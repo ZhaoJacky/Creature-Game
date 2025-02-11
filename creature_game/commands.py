@@ -1,15 +1,9 @@
-from monsters import Monster
-from monsters import Player
+# Creator: ZhaoJacky
+# Purpose: This file contains the functions that control the commands of the
+# player.
 
-# Calculates the max HP of a monster.
-def calculateHP(curr_hp, level):
-    new_hp = ((4 * curr_hp * level) / 200) + 50
-    return new_hp
-
-# Calculates the EXP needed for the monster to level up.
-def calculateEXP(level):
-    exp = (3 * level * level * level) / 5
-    return exp
+from classes import Monster
+from classes import Player
 
 # Prints the stats of the Monster.
 def printStats(monster: Monster):
