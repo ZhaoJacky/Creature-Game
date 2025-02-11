@@ -22,6 +22,9 @@ class Monster:
         self.max_exp = max_exp
         self.exp = exp
 
+        # Moveset
+        self.moveset = []
+
     # Gets data from the monster.
     def get_name(self):
         return self.name

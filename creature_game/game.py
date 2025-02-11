@@ -13,7 +13,6 @@ print("To begin your journey, please tell me your name.")
 player_name = input("Enter Name: ")
 player1 = Player(player_name)
 
-# Code that handles choosing a starter monster.
 print(f"\n{player1.get_name()} is it? Perfect! Now it's time to choose your starter!\n")
 print("Please enter the number of the starter you choose.")
 print("""1. Solfare
@@ -22,11 +21,12 @@ print("""1. Solfare
 
 starter_num = input("Choose your starter: ")
 
+# Takes in the number entered by User and adds correct Starter to Party.
 while(starter_num != "1" and starter_num != "2" and starter_num != "3"):
     print("Please enter a valid starter number.")
     starter_num = input("Choose your starter: ")
 if(starter_num == "1"):
-    starter = create.create_Monster("Solfare", 5, 0)
+    starter = create.create_Monster("Solflare", 5, 0)
     player1.add_Monster(starter)
 elif(starter_num == "2"):
     starter = create.create_Monster("Glacierfish", 5, 0)
@@ -45,6 +45,8 @@ while(command != "QUIT"):
     if(command == "1"):
         print("\nCurrent Party:")
         commands.printParty(player1)
+        commands.printAccessCommands()
+        commands.accessCommandQuery(player1)
     else:
         print("That's not a command!")
     
